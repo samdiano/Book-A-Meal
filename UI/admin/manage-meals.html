@@ -17,15 +17,15 @@
                     <h1 class="name">Book-A-Meal</h1>
                     <a href="../index.html">Home</a>
                     <a class="active" href="manage-meals.html">Manage Meals</a>
-                    <a href="signin.html">Sign in</a>
-                    <a href="signup.html">Sign up</a>
+                    <a href="menu.html">Set Menu</a>
+                    <a href="summary.html">Order Summary</a>
                 </div>    
                 
         </header>
 
         <div class="wrapper">
             <div class="wrap">
-                <h3 class="meal-header">Meal Options</h3>
+                <h3 class="meal-header">Meals Available</h3>
                 <ul>
                         <li>Italian Quinoa Salad <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
                         <li>Chicken Tortilla Lettuce Wraps <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
@@ -50,14 +50,14 @@
                 <form action="action_page.php">
                         <div class="containers">
                             <hr>
-                            <label for="email"><b>Meal Name</b></label>
+                            <label for="meal_name"><b>Meal Name</b></label>
                             <input type="text" placeholder="Enter Meal Name" name="meal_name" required>
             
-                            <label for="psw"><b>Meal Description</b></label>
-                            <input type="password" placeholder="Brief Desccription of the Meal" name="meal_desc" required>
+                            <label for="meal_desc"><b>Meal Description</b></label>
+                            <input type="text" placeholder="Brief Desccription of the Meal" name="meal_desc" required>
 
-                            <label for="psw"><b>Meal Type</b></label>
-                            <input type="password" placeholder="e.g First Course or Main Dish" name="meal_type" required>
+                            <label for="meal_type"><b>Meal Type</b></label>
+                            <input type="text" placeholder="e.g First Course or Main Dish" name="meal_type" required>
             
                             <hr>
                             <button type="submit" class="registerbtn">Add</button>
