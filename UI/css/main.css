@@ -243,7 +243,14 @@ a {
   background: rgba(243, 241, 235, 0.658);
   border-radius: 15px; 
   padding: 5px;
-  margin: 5%;
+  margin: 3% ;
+} 
+.wrap3{
+  flex: 8;
+  background: rgba(243, 241, 235, 0.658);
+  border-radius: 15px; 
+  padding: 5px;
+  margin: 5% auto ;
 } 
 .wrap2{
   flex: 8;
@@ -255,7 +262,7 @@ a {
   background: rgba(226, 175, 36, 0.164);
   margin: auto;
 }
-.wrap li{
+.wrap li, .menu-card li {
   margin: 10px;
   list-style-type: none;
 }
@@ -308,8 +315,14 @@ background-color: #a35c0a;
 }
 
 .menu-card {
-  background-image: url('../img/menu-card.jpg');
+  background-image: url('../img/menu-card-5.jpg');
+  background-size: 400px 600px;
   background-repeat: no-repeat;
+  width: auto;
+  flex: 2;
+  border-radius: 15px; 
+  padding: 5px;
+  margin: 5% auto ;
 }
 
 .menu-image {
@@ -320,9 +333,9 @@ background-color: #a35c0a;
   font-family: 'Dancing Script', cursive;
 }
 
-.menu-card h2 {
+.menu-card h2, .menu-card h2 li {
   margin-top: 15%;
-  margin-left: 25px;
+  margin-left: 30%;
   font-family: 'Dancing Script', cursive;
 }
 
