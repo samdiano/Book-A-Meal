@@ -245,6 +245,7 @@ a {
   border-radius: 15px; 
   padding: 5px;
   margin: 3% ;
+  height: 100%;
 } 
 .wrap3 h2 {
   text-align: center;
@@ -344,7 +345,7 @@ background-color: #a35c0a;
 }
 
 .menu-card h2, .menu-card h2 li {
-  margin-top: 15%;
+  margin-top: 20%;
   margin-left: 30%;
   font-family: 'Dancing Script', cursive;
 }
