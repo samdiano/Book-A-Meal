@@ -519,7 +519,58 @@ img {vertical-align: middle;}
 
 
 @media screen and (max-width: 980px) {
-  div.example {
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+  }
+  .name {
+    font-family: comic sans ms;
+    font-size: 30px;
+    text-align: center;
+  }
+  .topnav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+  }
+  .wrap1 {
     display: none;
   }
+
+  .container {
+    margin: 5% 0 0 0;
+    font-family: Tahoma;
+    background: rgba(255, 255, 255, 0.329);
+    border-radius: 10px;
+    color: rgb(107, 104, 104);
+    width: 100%;
+  }
+  .menu-image {
+    background-image: url('../img/menu-card-2.jpg');
+    background-repeat: no-repeat;
+    height:800px;
+    margin:0 0 0 0 ;
+    font-family: 'Dancing Script', cursive;
+  }
+  .wrapper3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("../img/bg-4.jpg");
+  }
+  .wrap2{
+    flex: 8;
+    border-radius: 15px; 
+    margin: 0;
+  }
+  .wrap li, .menu-card li {
+    margin: 0;
+    list-style-type: none;
+    padding:5% 0 5% 0;
+    font-size: 13px
+  }
+
 }
