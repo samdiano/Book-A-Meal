@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Meals | Book A Meal</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/main.js"></script>
+</head>
+<body>
+        <header>
+                <div class="topnav">
+                    <img class="image" src="img/chef4.png">
+                    <h1 class="name">Book-A-Meal</h1>
+                    <a href="../index.html">Home</a>
+                    <a class="active" href="manage-meals.html">Manage Meals</a>
+                    <a href="menu.html">Set Menu</a>
+                    <a href="summary.html">Order Summary</a>
+                </div>    
+                
+        </header>
+
+        <div class="wrapper">
+            <div class="wrap1">
+
+            </div>
+            <div class="wrap">
+                <h3 class="meal-header">Meals Available</h3>
+                <ul>
+                        <li>Italian Quinoa Salad <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Chicken Tortilla Lettuce Wraps <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Chicken Hummus Wrap <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Spinach Lasagna <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Spinach Tomato Tortellini Soup <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Banana Berry Smoothies <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Mashed Coconut Sweet Potatoes <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Stir Fry Peppersoup Spaghetti  <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Semolina with Vegetables <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Suya Chicken <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Jam Glazed Italian Meatballs  <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                        <li>Beef &amp; Plantain Peppersoup <span class="right"><button title="Edit"><i class="fa fa-pencil-square-o"></i></button>&nbsp;<button title="Delete"><i class="fa fa-trash"></i></button></span></li>
+                    
+                </ul>
+                <button class="btn" id="myBtn">Add Meal</button>
+
+            </div>
+            <div class="wrap1">
+
+            </div>
+            
+        </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h3 class="meal-header">Add Meal</h3>
+    </div>
+    <div class="modal-body">
+        <div class="wrap">
+            
+            <form action="action_page.php">
+                    <div class="containers">
+                        <label for="meal_name"><b>Meal Name</b></label>
+                        <input type="text" placeholder="Enter Meal Name" name="meal_name" required>
+        
+                        <label for="meal_desc"><b>Meal Description</b></label>
+                        <input type="text" placeholder="Brief Description of the Meal" name="meal_desc" required>
+
+                        <label for="meal_type"><b>Meal Type</b></label>
+                        <input type="text" placeholder="e.g First Course or Main Dish" name="meal_type" required>
+                        
+                        <label for="price"><b>Price</b></label>
+                        <input type="text" placeholder="Amount" name="price" required>
+        
+                        <button type="submit" class="registerbtn">Add</button>
+                    
+            </form>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+    
+</body>
+</html>

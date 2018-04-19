@@ -1,0 +1,520 @@
+
+body{
+    background: rgba(252,205,77,1);
+    background: -moz-linear-gradient(left, rgba(252,205,77,1) 0%, rgba(252,211,100,1) 14%, rgba(252,234,187,1) 67%, rgba(252,233,185,1) 69%, rgba(251,223,147,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(252,205,77,1)), color-stop(14%, rgba(252,211,100,1)), color-stop(67%, rgba(252,234,187,1)), color-stop(69%, rgba(252,233,185,1)), color-stop(100%, rgba(251,223,147,1)));
+    background: -webkit-linear-gradient(left, rgba(252,205,77,1) 0%, rgba(252,211,100,1) 14%, rgba(252,234,187,1) 67%, rgba(252,233,185,1) 69%, rgba(251,223,147,1) 100%);
+    background: -o-linear-gradient(left, rgba(252,205,77,1) 0%, rgba(252,211,100,1) 14%, rgba(252,234,187,1) 67%, rgba(252,233,185,1) 69%, rgba(251,223,147,1) 100%);
+    background: -ms-linear-gradient(left, rgba(252,205,77,1) 0%, rgba(252,211,100,1) 14%, rgba(252,234,187,1) 67%, rgba(252,233,185,1) 69%, rgba(251,223,147,1) 100%);
+    background: linear-gradient(to right, rgba(252,205,77,1) 0%, rgba(252,211,100,1) 14%, rgba(252,234,187,1) 67%, rgba(252,233,185,1) 69%, rgba(251,223,147,1) 100%);
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgba(202, 120, 27, 0.336);
+  overflow: hidden;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav h1 {
+  color: #814602;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #814602;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color:  #814602;
+}
+
+.container2 {
+display: flex;
+justify-content: space-between;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: -50%;
+    float:left;
+    height: 150px;
+
+}
+
+.name {
+    font-family: comic sans ms;
+    font-size: 50px;
+    text-align: center;
+}
+
+.button {
+    border-radius: 10px;
+    background-color: #814602;
+    border: none;
+    color: rgb(207, 187, 130);
+    text-align: center;
+    font-size: 36px;
+    font-family: Tahoma;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: inline;
+    padding: 7px;
+    flex: 2;
+    margin-left: 20%;
+    margin-right: 5%;
+  }
+  
+  .button a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button a:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover a {
+    padding-right: 25px;
+  }
+  
+  .button:hover a:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  .button2 {
+    border-radius: 10px;
+    background-color: #814602;
+    border: none;
+    color: rgb(207, 187, 130);
+    text-align: center;
+    font-size: 36px;
+    font-family: Tahoma;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: inline;
+    padding: 7px;
+    flex: 2;
+    margin-right: 20%;
+  }
+  
+  .button2 a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button2 a:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button2:hover a {
+    padding-right: 25px;
+  }
+  
+  .button2:hover a:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  * {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 5%;
+  font-family: Tahoma;
+  background: rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+  color: rgb(107, 104, 104);
+
+}
+.containers {
+  padding: 16px;
+}
+
+.container h1, p {
+  text-align: center;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #f4511e;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: transparent;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-image: url("../img/bg-3.jpg");
+  background-size: 100% 100%;
+}
+.wrapper2 {
+  display: flex;
+  justify-content: space-around;
+  background-size: 100% 100%;
+}
+.wrapper3 {
+  display: flex;
+  justify-content: space-around;
+  background-image: url("../img/bg-4.jpg");
+  background-size: 100% 100%;
+}
+.wrap{
+  flex: 2;
+  background: rgba(243, 241, 235, 0.658);
+  border-radius: 15px; 
+  padding: 5px;
+  margin: 3% ;
+} 
+.wrap3 h2 {
+  text-align: center;
+}
+.wrap3{
+  flex: 8;
+  background: rgba(243, 241, 235, 0.658);
+  border-radius: 15px; 
+  padding: 5px;
+  margin: 5% auto ;
+  font-family: 'Berkshire Swash', cursive;
+} 
+.wrap2{
+  flex: 8;
+  border-radius: 15px; 
+  margin: 5%;
+} 
+.wrap1{
+  flex: 1;
+  background: rgba(226, 175, 36, 0.164);
+  margin: auto;
+  font-family: 'Berkshire Swash', cursive;
+}
+.wrap li, .menu-card li {
+  margin: 10px;
+  list-style-type: none;
+}
+
+.meal-header {
+  font-family: comic sans ms;
+  font-size: 20px;
+  text-align: center;
+}
+.right {
+  float: right;
+}
+
+.btn {
+    margin: auto;
+    border-radius: 3px;
+    background-color: #814602;
+    border: none;
+    color: rgb(207, 187, 130);
+    text-align: center;
+    font-size: 20px;
+    font-family: Tahoma;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: block;
+    padding: 7px;
+    flex: 2;
+}
+
+.btn:hover {
+  background-color: #a35c0a;
+}
+
+.btn-sm {
+  border-radius: 3px;
+  background-color: #814602;
+  border: none;
+  color: rgb(207, 187, 130);
+  text-align: center;
+  font-size: 12px;
+  font-family: Tahoma;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 7px;
+  flex: 2;
+}
+
+.btn-sm:hover {
+background-color: #a35c0a;
+}
+
+.menu-card {
+  background-image: url('../img/menu-card-5.jpg');
+  background-size: 400px 600px;
+  background-repeat: no-repeat;
+  width: auto;
+  flex: 2;
+  border-radius: 15px; 
+  padding: 5px;
+  margin: 5% auto ;
+}
+
+.menu-image {
+  background-image: url('../img/menu-card-2.jpg');
+  background-repeat: no-repeat;
+  height:800px;
+  margin:5% 5% 5% 5% ;
+  font-family: 'Dancing Script', cursive;
+}
+
+.menu-card h2, .menu-card h2 li {
+  margin-top: 15%;
+  margin-left: 30%;
+  font-family: 'Dancing Script', cursive;
+}
+
+.appetizer1 {
+  padding: 30% 5% 0 5%;
+  text-align: center;
+  font-size: 20px;
+}
+.appetizer {
+  padding: 0 5% 0 5%;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #814602;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+.active-img {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+@media screen and (max-width: 980px) {
+  div.example {
+    display: none;
+  }
+}
