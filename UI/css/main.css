@@ -245,9 +245,15 @@ a {
   padding: 5px;
   margin: 5%;
 } 
+.wrap2{
+  flex: 8;
+  border-radius: 15px; 
+  margin: 5%;
+} 
 .wrap1{
   flex: 1;
   background: rgba(226, 175, 36, 0.164);
+  margin: auto;
 }
 .wrap li{
   margin: 10px;
@@ -301,26 +307,38 @@ a {
 background-color: #a35c0a;
 }
 
-table {
-  width: 100%;
-}
-table tr th,td {
-  width: 30%;
-  padding: 5px;
-}
-@media screen and (max-width: 980px) {
-  div.example {
-    display: none;
-  }
-}
-
 .menu-card {
   background-image: url('../img/menu-card.jpg');
   background-repeat: no-repeat;
+}
+
+.menu-image {
+  background-image: url('../img/menu-card-2.jpg');
+  background-repeat: no-repeat;
+  height:800px;
+  margin:5% 5% 5% 5% ;
+  font-family: 'Dancing Script', cursive;
 }
 
 .menu-card h2 {
   margin-top: 15%;
   margin-left: 25px;
   font-family: 'Dancing Script', cursive;
+}
+
+.appetizer1 {
+  padding: 30% 5% 0 5%;
+  text-align: center;
+  font-size: 20px;
+}
+.appetizer {
+  padding: 0 5% 0 5%;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 980px) {
+  div.example {
+    display: none;
+  }
 }
