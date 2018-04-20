@@ -10,20 +10,22 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body>
-        <header>
-                <div class="topnav">
-                    <img class="image" src="../img/chef4.png">
-                    <h1 class="name">Book-A-Meal</h1>
-                    <a href="../index.html">Home</a>
-                    <a class="active" href="manage-meals.html">Manage Meals</a>
-                    <a href="menu.html">Set Menu</a>
-                    <a href="summary.html">Order Summary</a>
-                </div>    
-                
-        </header>
+
+    <header>
+            <div class="topnav" id="myTopnav">
+                <img class="image" src="../img/chef4.png">
+                <h1 class="name">Book-A-Meal</h1>
+                <a class="active" href="index.html">Home</a>
+                <a href="../menu.html">Book A Meal</a>
+                <a href="../signin.html">Sign in</a>
+                <a href="../signup.html">Sign up</a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>     
+            
+    </header>
 
         <div class="wrapper">
             <div class="wrap1">
@@ -68,7 +70,7 @@
     <div class="modal-body">
         <div class="wrap">
             
-            <form action="action_page.php">
+            <form action="#">
                     <div class="containers">
                         <label for="meal_name"><b>Meal Name</b></label>
                         <input type="text" placeholder="Enter Meal Name" name="meal_name" required>
