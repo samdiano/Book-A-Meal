@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book A Meal</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <img class="image" src="img/chef4.png">
+            <h1 class="name">Book-A-Meal</h1>
+            <a class="active" href="index.html">Home</a>
+            <a href="menu.html">Book A Meal</a>
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Sign up</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>    
+        
+    </header>
+    <div class="wrapper2">
+            <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext"></div>
+                      <img class="bg-img" src="img/bg-2.jpg" style="width:100%; ">
+                      <div class="text">Nutritious Meal You Can Trust <br><br> <button class="btn"><a href="signup.html">Take A Look</a></button></div>
+                    </div>
+                    
+            </div>
+            <br>
+            
+                    
+    </div>
+    <h3 class="name2">Tasty Food For You</h3>
+    <div class="wrapper2">
+            <div class = "wrap2">
+                <div class="box">
+                    <img src="img/food1.jpg" height = "213px" width="100%">
+                    <h3>Risotto</h3>
+                </div>
+                
+            </div>
+            <div class = "wrap2">
+                <div class="box">
+                    <img src="img/food3.jpg" height = "213px" width="100%">
+                    <h3>Samvita with Mixed Vegetable </h3>
+                </div>      
+            </div>
+            <div class = "wrap2">
+                <div class="box">
+                    <img src="img/food2.jpg" height = "213px" width="100%">
+                    <h3>Spaghetti Bolognaise</h3>
+                </div>
+            </div>
+    </div>
+
+    <div class="wrapper2">
+            <div class = "wrap2">
+                <div class="box">
+                    <img src="img/food1.jpg" height = "213px" width="100%">
+                    <h3>Coconut Rice</h3>
+                    
+                </div>
+                
+            </div>
+            <div class = "wrap2">
+                <div class="box">
+                    <img src="img/food3.jpg" height = "213px" width="100%">
+                    <h3>Amala with Egusi</h3>
+                </div>      
+            </div>
+            <div class = "wrap2">
+                <div class="box">
+                    <img src="img/food2.jpg" height = "213px" width="100%">
+                    <h3>Spaghetti Aglio</h3>
+                </div>
+            </div>
+    </div>
+
+
+
+    <script>
+        var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active-img", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}   
+    </script>
+    
+    <!-- <div class="container2">
+            <button class="button"><a href="signup.html">Sign Up</a></button>
+            <button class="button2"><a href="signin.html"> Sign In</a></button>
+        </div>
+    -->
+
+    <footer>
+        <h4>Book-A-Meal &COPY;</h4>
+    </footer>
+
+    
+</body>
+</html>
