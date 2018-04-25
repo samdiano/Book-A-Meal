@@ -19,7 +19,7 @@ const routes = (app) => {
 
   // Get the days Menu
   app.get('/api/v1/menu', menu.getMenu);
-  // add meal to Menu
+  // add meals to Menu
   app.post('/api/v1/menu', menu.addMeal);
   // update meal in Menu
   app.put('/api/v1/menu/:mealId', menu.updateMeal);
