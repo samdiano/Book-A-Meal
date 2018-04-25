@@ -5,11 +5,12 @@ const { menu } = db;
 class menuController {
   static addMeal(req, res) {
     const {
-      title, description, price,
+      title, description, price, userId,
     } = req.body;
     const id = menu.meals[menu.meals.length - 1].id + 1;
     const addedMeal = {
       id,
+      userId,
       title,
       description,
       price,
