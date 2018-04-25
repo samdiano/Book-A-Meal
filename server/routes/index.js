@@ -23,7 +23,7 @@ const routes = (app) => {
   app.post('/api/v1/menu', menu.addMeal);
   // update meal in Menu
   app.put('/api/v1/menu/:mealId', menu.updateMeal);
-  // remove a meal
+  // remove a meal from menu
   app.delete('/api/v1/menu/:mealId', menu.removeMeal);
 
   // get a meal
