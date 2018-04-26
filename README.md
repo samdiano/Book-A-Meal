@@ -13,3 +13,15 @@ https://api.travis-ci.org/samdiano/Book-A-Meal.png?branch=156841597-setup-test-a
 https://codeclimate.com/github/samdiano/Book-A-Meal.png
 
 https://coveralls.io/repos/samdiano/Book-A-Meal/badge.png
+
+<img src="https://coveralls.io/repos/samdiano/Book-A-Meal/badge.png"
+     alt="Coveralls"
+     style="float: left; margin-right: 10px;" />
+
+<img src="https://codeclimate.com/github/samdiano/Book-A-Meal.png"
+     alt="Code Climate"
+     style="float: left; margin-right: 10px;" />
+
+<img src="https://api.travis-ci.org/samdiano/Book-A-Meal.png?branch=156841597-setup-test-api-endpoints-modify-order"
+     alt="travis CI"
+     style="float: left; margin-right: 10px;" />
