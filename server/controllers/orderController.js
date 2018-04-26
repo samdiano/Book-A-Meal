@@ -50,21 +50,6 @@ class mealController {
       message: 'All orders',
     });
   }
-
-  static getmeal(req, res) {
-    const { mealId } = req.params;
-    const foundMeal = orders.filter(meal => meal.id === parseInt(mealId, 10));
-    if (foundMeal.length === 0) {
-      return res.status(404).json({
-        message: 'meal does not exist in Menu',
-        status: 'error',
-      });
-    }
-    return res.status(200).json({
-      meal: foundMeal,
-      status: 'Success',
-    });
-  }
 }
 
 export default mealController;
