@@ -7,3 +7,9 @@ The project entails having a caterer as the site administrator and can add meals
 **Note**: This repository is managed through the PivotalTracker project [here](https://www.pivotaltracker.com/n/projects/2165512).
 
 The UI is hosted [here](www.samdiano.github.io/Book-A-Meal).
+
+https://api.travis-ci.org/samdiano/Book-A-Meal.png?branch=156841597-setup-test-api-endpoints-modify-order
+
+https://codeclimate.com/github/samdiano/Book-A-Meal.png
+
+https://coveralls.io/repos/samdiano/Book-A-Meal/badge.png
