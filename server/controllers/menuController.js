@@ -5,7 +5,7 @@ const { menu } = db;
 class menuController {
   static addMeal(req, res) {
     const {
-      title, description, price, userId,
+      title, description, price, userId, date,
     } = req.body;
     const id = menu.meals[menu.meals.length - 1].id + 1;
     const addedMeal = {
@@ -14,6 +14,7 @@ class menuController {
       title,
       description,
       price,
+      date,
     };
     const foundMeal = menu.meals.find(meal =>
       (meal.title.toLowerCase() === title.toLowerCase()));

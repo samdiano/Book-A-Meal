@@ -65,12 +65,12 @@ class mealController {
       return res.status(200).json({
         meals,
         status: 'Success',
-        message: 'Meal was successfully removed from Menu',
+        message: 'Meal was successfully removed',
       });
     }
     return res.status(404).json({
       status: 'error',
-      message: 'Meal not found in menu',
+      message: 'Meal not found',
     });
   }
 

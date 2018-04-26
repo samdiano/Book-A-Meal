@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel-core/register",
     "lint": "eslint . --fix",
-    "babel-node": "babel-node ./app.js --presets=env",
+    "babel-node": "babel-node ./app.js ./test/test --presets=env",
     "dev-server": "nodemon --exec npm run babel-node -- ./app.js"
   },
   "author": "George Samuel",
@@ -27,6 +27,7 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "dotenv": "^5.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
