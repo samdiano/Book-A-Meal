@@ -8,12 +8,6 @@ The project entails having a caterer as the site administrator and can add meals
 
 The UI is hosted [here](www.samdiano.github.io/Book-A-Meal).
 
-https://api.travis-ci.org/samdiano/Book-A-Meal.png?branch=156841597-setup-test-api-endpoints-modify-order
-
-https://codeclimate.com/github/samdiano/Book-A-Meal.png
-
-https://coveralls.io/repos/samdiano/Book-A-Meal/badge.png
-
 <img src="https://coveralls.io/repos/samdiano/Book-A-Meal/badge.png"
      alt="Coveralls"
      style="float: left; margin-right: 10px;" />
