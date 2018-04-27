@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --exit",
+    "test": "nyc --reporter=html --reporter=text mocha --compilers js:babel-core/register --exit",
     "lint": "eslint . --fix",
     "babel-node": "babel-node ./app.js ./test/test --presets=env",
     "dev-server": "nodemon --exec npm run babel-node -- ./app.js",
