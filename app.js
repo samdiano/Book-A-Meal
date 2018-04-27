@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 routes(app);
 // app.use('/api/v1/users', userRoutes);
 // app.use('/api/v1/recipes', recipeRoutes);
-app.listen(process.env.PORT || 3000, function (){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+app.listen(port, () => {
+  console.log(`listening to port ${port}`);
 });
 // db.sequelize.sync().then(() => {
 
