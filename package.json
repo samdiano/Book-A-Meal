@@ -7,7 +7,7 @@
     "test": "nyc --reporter=html --reporter=text mocha --compilers js:babel-core/register --exit",
     "lint": "eslint . --fix",
     "babel-node": "babel-node ./app.js ./test/test --presets=env",
-    "dev-server": "nodemon --exec npm run babel-node -- ./app.js",
+    "start": "nodemon --exec npm run babel-node -- ./app.js",
     "coveralls":"nyc report --reporter=text-lcov | coveralls"
   },
   "author": "George Samuel",
