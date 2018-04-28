@@ -1,7 +1,7 @@
 
 [![Build Status](https://travis-ci.org/samdiano/Book-A-Meal.svg?branch=156841597-setup-test-api-endpoints-modify-order)](https://travis-ci.org/samdiano/Book-A-Meal)
 
-[![Coverage Status](https://coveralls.io/repos/github/samdiano/Book-A-Meal/badge.svg?branch=156841597-setup-test-api-endpoints-modify-order)](https://coveralls.io/github/samdiano/More-Recipes?branch=development)
+[![Coverage Status](https://coveralls.io/repos/github/samdiano/Book-A-Meal/badge.svg?branch=156841597-setup-test-api-endpoints-modify-order)](https://coveralls.io/github/samdiano/Book-A-Meal)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/d6f77b3460641f377228/maintainability)](https://codeclimate.com/github/samdiano/Book-A-Meal/maintainability)
 
