@@ -45,7 +45,7 @@ class mealController {
 
   static getOrders(req, res) {
     return res.status(200).json({
-      menu: orders,
+      orders,
       status: 'Success',
       message: 'List of Orders',
     });
