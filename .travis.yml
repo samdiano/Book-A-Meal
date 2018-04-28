@@ -17,8 +17,8 @@ install:
   - npm install
 
 script:
-  - npm run lint:server
-  - npm run test:server
+  - npm run lint
+  - npm run test
 
 deploy:
   skip_cleanup: true
