@@ -1,34 +1,18 @@
 language: node_js
+
 node_js:
-  - "9"
-env:
-  - CXX=g++-4.8
+  - 8.2.1
+dist: trusty
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-      after_success: 
-
-  - npm run coveralls
-
-
-cache:
-
-  directories:
-
-    - "node_modules"
-
-env:
-  global:
-    - CC_TEST_REPORTER_ID=75ac9270ca6697e4f36aec13cd8b8b6265c5a15e89f7479a4c1f35afe50130f5
-
+  chrome: stable
 before_script:
+  - yarn global add nyc
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+
 script:
-  - bundle exec rspec
+  - nyc --reporter=lcov yarn run unit
+
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
