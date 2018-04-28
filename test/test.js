@@ -108,7 +108,7 @@ it('Should add a meal to the menu', (done) => {
             date: 3 - 4 - 2018,
           })
           .end((err, res) => {
-            expect(res.body.message).to.equal('Meal updated successfully');
+            expect(res.body.message).to.equal('Menu updated successfully');
             expect(res.status).to.equal(200);
             expect(res.body).to.have.property('status').equal('Success');
             done();
