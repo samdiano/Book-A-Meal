@@ -3,7 +3,7 @@ import db from '../../model';
 const { orders } = db;
 
 class mealController {
-  static addMeal(req, res) {
+  static addOrder(req, res) {
     const {
       mealId, price, userId, quantity,
     } = req.body;
@@ -24,15 +24,15 @@ class mealController {
   }
 
   static updateOrder(req, res) {
-    const foundMeal = orders.find(meal => meal.id === parseInt(req.params.orderId, 10));
-    if (foundMeal) {
-      foundMeal.id = req.body.id;
-      foundMeal.userId = req.body.userId;
-      foundMeal.mealId = req.body.mealId;
-      foundMeal.quantity = req.body.quantity;
-      foundMeal.price = req.body.price;
+    const foundOrder = orders.find(meal => meal.id === parseInt(req.params.orderId, 10));
+    if (foundOrder) {
+      foundOrder.id = req.body.id;
+      foundOrder.userId = req.body.userId;
+      foundOrder.mealId = req.body.mealId;
+      foundOrder.quantity = req.body.quantity;
+      foundOrder.price = req.body.price;
       return res.status(200).json({
-        foundMeal,
+        foundOrder,
         status: 'Success',
         message: 'Order updated successfully',
       });

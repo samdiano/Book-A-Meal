@@ -3,7 +3,7 @@ import db from '../../model';
 const { menu } = db;
 
 class menuController {
-  static addMeal(req, res) {
+  static addMenu(req, res) {
     const {
       title, description, price, userId, date,
     } = req.body;
@@ -16,9 +16,9 @@ class menuController {
       price,
       date,
     };
-    const foundMeal = menu.meals.find(meal =>
+    const foundMenu = menu.meals.find(meal =>
       (meal.title.toLowerCase() === title.toLowerCase()));
-    if (!foundMeal) {
+    if (!foundMenu) {
       menu.meals.push(addedMeal);
       return res.status(201).json({
         meal: addedMeal,
@@ -26,8 +26,8 @@ class menuController {
         message: 'Meal added to Menu successfully',
       });
     }
-    if (foundMeal) {
-      if (foundMeal.id === id) {
+    if (foundMenu) {
+      if (foundMenu.id === id) {
         return res.status(409).json({
           message: `A meal with this '${id}' is already in the Menu`,
           status: 'Fail',
@@ -35,19 +35,19 @@ class menuController {
       }
     }
     return res.status(409).json({
-      message: `The meal '${foundMeal.title}' already exists in the Menu`,
+      message: `The meal '${foundMenu.title}' already exists in the Menu`,
       status: 'Fail',
     });
   }
 
-  static updateMeal(req, res) {
-    const foundMeal = menu.meals.find(meal => meal.id === parseInt(req.params.mealId, 10));
-    if (foundMeal) {
-      foundMeal.title = req.body.title;
-      foundMeal.description = req.body.description;
-      foundMeal.price = req.body.price;
+  static updateMenu(req, res) {
+    const foundMenu = menu.meals.find(meal => meal.id === parseInt(req.params.mealId, 10));
+    if (foundMenu) {
+      foundMenu.title = req.body.title;
+      foundMenu.description = req.body.description;
+      foundMenu.price = req.body.price;
       return res.status(200).json({
-        foundMeal,
+        foundMenu,
         status: 'Success',
         message: 'Meal updated successfully',
       });
@@ -58,11 +58,11 @@ class menuController {
     });
   }
 
-  static removeMeal(req, res) {
-    const foundMeal = menu.meals.find(meal => meal.id === parseInt(req.params.mealId, 10));
+  static removeMenu(req, res) {
+    const foundMenu = menu.meals.find(meal => meal.id === parseInt(req.params.mealId, 10));
 
-    if (foundMeal) {
-      menu.meals.splice(foundMeal.id - 1, 1);
+    if (foundMenu) {
+      menu.meals.splice(foundMenu.id - 1, 1);
       return res.status(200).json({
         menu,
         status: 'Success',
@@ -83,17 +83,17 @@ class menuController {
     });
   }
 
-  static getmeal(req, res) {
+  static getmenu(req, res) {
     const { mealId } = req.params;
-    const foundMeal = menu.meals.filter(meal => meal.id === parseInt(mealId, 10));
-    if (foundMeal.length === 0) {
+    const foundMenu = menu.meals.filter(meal => meal.id === parseInt(mealId, 10));
+    if (foundMenu.length === 0) {
       return res.status(404).json({
         message: 'meal does not exist in Menu',
         status: 'error',
       });
     }
     return res.status(200).json({
-      meal: foundMeal,
+      meal: foundMenu,
       status: 'Success',
     });
   }

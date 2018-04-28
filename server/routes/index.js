@@ -21,16 +21,16 @@ const routes = (app) => {
   // Get the days Menu
   app.get('/api/v1/menu', menu.getMenu);
   // add meals to Menu
-  app.post('/api/v1/menu', menu.addMeal);
+  app.post('/api/v1/menu', menu.addMenu);
   // update meal in Menu
-  app.put('/api/v1/menu/:mealId', menu.updateMeal);
+  app.put('/api/v1/menu/:mealId', menu.updateMenu);
   // remove a meal from menu
-  app.delete('/api/v1/menu/:mealId', menu.removeMeal);
+  app.delete('/api/v1/menu/:mealId', menu.removeMenu);
 
   // Get the days Menu
   app.get('/api/v1/orders', orders.getOrders);
   // add meals to Menu
-  app.post('/api/v1/orders', orders.addMeal);
+  app.post('/api/v1/orders', orders.addOrder);
   // update meal in Menu
   app.put('/api/v1/orders/:orderId', orders.updateOrder);
 
