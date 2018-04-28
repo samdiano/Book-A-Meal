@@ -5,14 +5,13 @@ const { menu } = db;
 class menuController {
   static addMenu(req, res) {
     const {
-      title, description, price, userId, date,
+      title, price, userId, date,
     } = req.body;
     const id = menu.meals[menu.meals.length - 1].id + 1;
     const addedMeal = {
       id,
       userId,
       title,
-      description,
       price,
       date,
     };
@@ -44,17 +43,16 @@ class menuController {
     const foundMenu = menu.meals.find(meal => meal.id === parseInt(req.params.mealId, 10));
     if (foundMenu) {
       foundMenu.title = req.body.title;
-      foundMenu.description = req.body.description;
       foundMenu.price = req.body.price;
       return res.status(200).json({
         foundMenu,
         status: 'Success',
-        message: 'Meal updated successfully',
+        message: 'Menu updated successfully',
       });
     }
     return res.status(404).json({
       status: 'Error',
-      message: 'Meal not found',
+      message: 'Menu not found',
     });
   }
 
