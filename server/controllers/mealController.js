@@ -76,9 +76,9 @@ class mealController {
 
   static getAllMeals(req, res) {
     return res.status(200).json({
-      meals,
-      status: 'Success',
-      message: 'All meals',
+      meal: meals,
+      status: 'Ok',
+      message: 'All meals options',
     });
   }
 
