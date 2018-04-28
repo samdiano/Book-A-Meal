@@ -28,7 +28,6 @@ class menuController {
     if (foundMenu) {
       if (foundMenu.id === id) {
         return res.status(409).json({
-          message: `This menu already contains a meal with an Id of '${id}' `,
           status: 'Fail',
         });
       }
@@ -86,7 +85,6 @@ class menuController {
     const foundMenu = menu.meals.filter(meal => meal.id === parseInt(mealId, 10));
     if (foundMenu.length === 0) {
       return res.status(404).json({
-        message: 'meal does not exist in Menu',
         status: 'error',
       });
     }
