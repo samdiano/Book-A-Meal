@@ -28,13 +28,13 @@ class menuController {
     if (foundMenu) {
       if (foundMenu.id === id) {
         return res.status(409).json({
-          message: `A meal with this '${id}' is already in the Menu`,
+          message: `This menu already contains a meal with an Id of '${id}' `,
           status: 'Fail',
         });
       }
     }
     return res.status(409).json({
-      message: `The meal '${foundMenu.title}' already exists in the Menu`,
+      message: `The meal '${foundMenu.title}' is already in the Menu`,
       status: 'Fail',
     });
   }

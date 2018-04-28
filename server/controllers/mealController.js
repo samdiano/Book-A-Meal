@@ -87,7 +87,7 @@ class mealController {
     const foundMeal = meals.filter(meal => meal.id === parseInt(mealId, 10));
     if (foundMeal.length === 0) {
       return res.status(404).json({
-        message: 'meal does not exist in Menu',
+        message: 'meal does not exist',
         status: 'error',
       });
     }

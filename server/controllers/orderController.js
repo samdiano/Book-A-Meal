@@ -47,7 +47,7 @@ class mealController {
     return res.status(200).json({
       menu: orders,
       status: 'Success',
-      message: 'All orders',
+      message: 'List of Orders',
     });
   }
 }
