@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/samdiano/Book-A-Meal.svg?branch=server-156841597-setup-test-api-endpoints-modify-order)](https://travis-ci.org/samdiano/Book-A-Meal)
+[![Build Status](https://travis-ci.org/samdiano/Book-A-Meal.svg?branch=156841597-setup-test-api-endpoints-modify-order)](https://travis-ci.org/samdiano/Book-A-Meal)
 
 [![Coverage Status](https://coveralls.io/repos/github/samdiano/Book-A-Meal/badge.svg?branch=156841597-setup-test-api-endpoints-modify-order)](https://coveralls.io/github/samdiano/More-Recipes?branch=development)
 
