@@ -4,12 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha --compilers js:babel-core/register --exit",
+    "test": "mocha --compilers js:babel-core/register --exit",
     "lint": "eslint . --fix",
     "babel-node": "babel-node ./app.js ./test/test --presets=env",
     "start": "npm run babel-node -- ./app.js",
     "dev-server": "nodemon --exec npm run babel-node -- ./app.js",
-    "coveralls":"nyc report --reporter=text-lcov | coveralls"
+    "coverage": "babel-node ./node_modules/istanbul/lib/cli cover _mocha test/index.js",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "author": "George Samuel",
   "license": "ISC",
