@@ -122,7 +122,7 @@ Samuel George [samdiano](https://github.com/samdiano/)
 ## License 
 ____
 
-This is licensed for your use, modification and distribution under the [MIT LICENSE](https://github.com/samdiano/Book-A-Meal/blob/development/LICENSE)
+This is licensed for your use, modification and distribution under the [MIT LICENSE](https://github.com/samdiano/Book-A-Meal/blob/develop/LICENSE)
 
 **Note**: This repository is managed through the PivotalTracker project [here](https://www.pivotaltracker.com/n/projects/2165512).
 
