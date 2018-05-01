@@ -1,19 +1,18 @@
 {
-  "name": "book",
+  "name": "meal",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --exit",
+    "test": "nyc --require babel-core/register mocha test/test.js --exit",
     "lint": "eslint . --fix",
     "babel-node": "babel-node ./app.js ./test/test --presets=env",
     "start": "npm run babel-node -- ./app.js",
     "dev-server": "nodemon --exec npm run babel-node -- ./app.js",
-    "coverage": "babel-node ./node_modules/istanbul/lib/cli cover _mocha test/test.js",
-    "report-coverage": "cat ./coverage/lcov.info | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "George Samuel",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",

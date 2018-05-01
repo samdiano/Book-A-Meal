@@ -8,12 +8,12 @@
   "require": ["babel-register"],
   "exclude": [
     "**/*.test.js",
-    "**/__tests__/**",
+    "**/__test__/**",
     "**/node_modules/**",
-    "server/config",
-    "server/coverage/**",
-    "server/tests/**",
-    "server/test{,-*}.js"
+    "config",
+    "coverage/**",
+    "tests/**",
+    "test{,-*}.js"
   ],
   "reporter": ["lcov", "json", "text"],
   "sourceMap": false,
