@@ -2,7 +2,11 @@
     "presets": ["env"],
     "env": {
       "test": {
-        "plugins": ["istanbul"]
+        "plugins": [
+          "istanbul",
+          "add-module-exports"
+        ]
       }
     }
+    
   }
