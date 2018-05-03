@@ -9,7 +9,8 @@
     "babel-node": "babel-node ./app.js ./test/test --presets=env",
     "start": "npm run babel-node -- ./app.js",
     "dev-server": "nodemon --exec npm run babel-node -- ./app.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "cover": "istanbul cover jasmine",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "author": "George Samuel",
   "license": "MIT",
@@ -31,7 +32,7 @@
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
-    "coveralls": "^3.0.0",
+    "coveralls": "^3.0.1",
     "dotenv": "^5.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",

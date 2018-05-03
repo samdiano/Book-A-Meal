@@ -1,9 +1,8 @@
 import meal from '../controllers/mealController';
 import menu from '../controllers/menuController';
 import orders from '../controllers/orderController';
-
-// import Auth from '../controllers/userController';
-// import ValidatorHandler from '../middlewares/validation';
+import Auth from '../controllers/userController';
+import ValidatorHandler from '../middlewares/validation';
 
 const routes = (app) => {
   app.get('/api/v1', (req, res) => {
@@ -36,12 +35,11 @@ const routes = (app) => {
 
   // get a meal
   // app.get('/api/v1/meals/:mealId', meal.getMeal);
-/*
+
   // sign up a user
   app.post('/api/v1/auth/signup', ValidatorHandler.userRequiredInputs, Auth.signupUser);
   // Login a user
   app.post('/api/v1/auth/signin', Auth.signinUser);
-  */
 };
 
 export default routes;

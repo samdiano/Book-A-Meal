@@ -8,10 +8,15 @@
         }
     },
     "rules": {
+        "semi": 2,
         "import/no-unresolved": "off",
-        "import/extensions": "off"
-    },
-    "env": {
-        "jasmine": true
-      }
+        "import/extensions": "off",
+        "comma-dangle": ["error", {
+            "arrays": "never",
+            "objects": "never",
+            "imports": "never",
+            "exports": "never",
+            "functions": "ignore"
+        }]
+    }
 }
