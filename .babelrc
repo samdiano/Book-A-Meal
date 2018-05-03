@@ -3,8 +3,7 @@
     "env": {
       "test": {
         "plugins": [
-          "istanbul",
-          "add-module-exports"
+          "istanbul"
         ]
       }
     }
