@@ -358,7 +358,7 @@ background-color: #a35c0a;
 
 .menu-card {
   background-image: url('../img/menu-card-5.jpg');
-  background-size: 400px 600px;
+  background-size: 80% 100%;
   background-repeat: no-repeat;
   width: auto;
   flex: 2;
@@ -372,12 +372,12 @@ background-color: #a35c0a;
   background-repeat: no-repeat;
   height:800px;
   margin:5% 15% 5% 15% ;
+  position: absolute;
   font-family: 'Dancing Script', cursive;
 }
 
-.menu-card h2, .menu-card h2 li {
-  margin-top: 20%;
-  margin-left: 30%;
+.menu-card  {
+  padding-left: 10%;
   font-family: 'Dancing Script', cursive;
 }
 
