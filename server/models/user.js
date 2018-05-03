@@ -3,13 +3,22 @@ export default (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     name: DataTypes.STRING,
-    role: DataTypes.STRING,
+    role: DataTypes.STRING
   }, {});
   User.associate = (models) => {
     // associations can be defined here
-    User.belongsToMany(models.Meal);
-    User.belongsToMany(models.Menu);
-    User.belongsToMany(models.Order);
+    User.hasMany(models.Meals, {
+      foreignKey: 'mealId',
+      onDelete: 'CASCADE'
+    });
+    User.hasMany(models.Menu, {
+      foreignKey: 'menuId',
+      onDelete: 'CASCADE'
+    });
+    User.hasMany(models.Order, {
+      foreignKey: 'orderId',
+      onDelete: 'CASCADE'
+    });
   };
   return User;
 };

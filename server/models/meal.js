@@ -4,15 +4,14 @@ export default (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     title: DataTypes.STRING,
     description: DataTypes.STRING,
-    price: DataTypes.STRING,
+    price: DataTypes.STRING
   }, {});
   Meal.associate = (models) => {
-    // associations can be defined here
-    Meal.belongsToMany(models.Menu, {
-      through: 'MenuMeal',
-      as: 'Menu',
-      foreignKey: 'mealId',
-    });
+   /* // associations can be defined here
+    Meal.belongsTo(models.user, {
+      foreignKey: 'userId',
+      onDelete: 'CASCADE'
+    }); */
   };
   return Meal;
 };

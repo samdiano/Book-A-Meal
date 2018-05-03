@@ -18,5 +18,8 @@
             "exports": "never",
             "functions": "ignore"
         }]
-    }
+    },
+    "env": {
+        "jasmine": true
+      }
 }

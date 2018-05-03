@@ -7,6 +7,6 @@ export default {
   users,
   meals,
   menu,
-  orders,
+  orders
 
 };

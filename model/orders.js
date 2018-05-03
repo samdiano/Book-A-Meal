@@ -4,7 +4,7 @@ const orders = [
     userId: 22,
     mealId: 5,
     quantity: 2,
-    price: 700,
+    price: 700
 
   },
   {
@@ -12,9 +12,9 @@ const orders = [
     userId: 22,
     mealId: 5,
     quantity: 1,
-    price: 1000,
+    price: 1000
 
-  },
+  }
 ];
 
 export default orders;

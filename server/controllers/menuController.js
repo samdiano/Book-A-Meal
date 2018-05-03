@@ -5,7 +5,7 @@ const { menu } = db;
 class menuController {
   static addMenu(req, res) {
     const {
-      title, price, userId, date,
+      title, price, userId, date
     } = req.body;
     const id = menu.meals[menu.meals.length - 1].id + 1;
     const addedMeal = {
@@ -13,7 +13,7 @@ class menuController {
       userId,
       title,
       price,
-      date,
+      date
     };
     const foundMenu = menu.meals.find(meal =>
       (meal.title.toLowerCase() === title.toLowerCase()));
@@ -22,19 +22,19 @@ class menuController {
       return res.status(201).json({
         meal: addedMeal,
         status: 'Success',
-        message: 'Meal added to Menu successfully',
+        message: 'Meal added to Menu successfully'
       });
     }
     if (foundMenu) {
       if (foundMenu.id === id) {
         return res.status(409).json({
-          status: 'Fail',
+          status: 'Fail'
         });
       }
     }
     return res.status(409).json({
       message: `The meal '${foundMenu.title}' is already in the Menu`,
-      status: 'Fail',
+      status: 'Fail'
     });
   }
 
@@ -46,12 +46,12 @@ class menuController {
       return res.status(200).json({
         foundMenu,
         status: 'Success',
-        message: 'Menu updated successfully',
+        message: 'Menu updated successfully'
       });
     }
     return res.status(404).json({
       status: 'Error',
-      message: 'Menu not found',
+      message: 'Menu not found'
     });
   }
 
@@ -63,12 +63,12 @@ class menuController {
       return res.status(200).json({
         menu,
         status: 'Success',
-        message: 'Meal was successfully removed from Menu',
+        message: 'Meal was successfully removed from Menu'
       });
     }
     return res.status(404).json({
       status: 'error',
-      message: 'Meal not found in menu',
+      message: 'Meal not found in menu'
     });
   }
 
@@ -76,7 +76,7 @@ class menuController {
     return res.status(200).json({
       menu,
       status: 'Success',
-      message: 'The menu for Today',
+      message: 'The menu for Today'
     });
   }
 
@@ -85,12 +85,12 @@ class menuController {
     const foundMenu = menu.meals.filter(meal => meal.id === parseInt(mealId, 10));
     if (foundMenu.length === 0) {
       return res.status(404).json({
-        status: 'error',
+        status: 'error'
       });
     }
     return res.status(200).json({
       meal: foundMenu,
-      status: 'Success',
+      status: 'Success'
     });
   }
 }

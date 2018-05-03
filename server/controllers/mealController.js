@@ -5,7 +5,7 @@ const { meals } = db;
 class mealController {
   static addMeal(req, res) {
     const {
-      title, description, price, userId,
+      title, description, price, userId
     } = req.body;
     const id = meals[meals.length - 1].id + 1;
     const addedMeal = {
@@ -13,7 +13,7 @@ class mealController {
       userId,
       title,
       description,
-      price,
+      price
     };
     const foundMeal = meals.find(meal =>
       (meal.title.toLowerCase() === title.toLowerCase()));
@@ -22,20 +22,20 @@ class mealController {
       return res.status(201).json({
         meal: addedMeal,
         status: 'Success',
-        message: 'Meal added successfully',
+        message: 'Meal added successfully'
       });
     }
     if (foundMeal) {
       if (foundMeal.id === id) {
         return res.status(409).json({
           message: `A meal with this '${id}' is already in the meal options`,
-          status: 'Fail',
+          status: 'Fail'
         });
       }
     }
     return res.status(409).json({
       message: `The meal '${foundMeal.title}' already exists in the meal option`,
-      status: 'Fail',
+      status: 'Fail'
     });
   }
 
@@ -48,12 +48,12 @@ class mealController {
       return res.status(200).json({
         foundMeal,
         status: 'Success',
-        message: 'Meal updated successfully',
+        message: 'Meal updated successfully'
       });
     }
     return res.status(404).json({
       status: 'Error',
-      message: 'Meal not found',
+      message: 'Meal not found'
     });
   }
 
@@ -65,12 +65,12 @@ class mealController {
       return res.status(200).json({
         meals,
         status: 'Success',
-        message: 'Meal was successfully removed',
+        message: 'Meal was successfully removed'
       });
     }
     return res.status(404).json({
       status: 'error',
-      message: 'Meal not found',
+      message: 'Meal not found'
     });
   }
 
@@ -78,7 +78,7 @@ class mealController {
     return res.status(200).json({
       meal: meals,
       status: 'Ok',
-      message: 'All meals options',
+      message: 'All meals options'
     });
   }
 
@@ -88,12 +88,12 @@ class mealController {
     if (foundMeal.length === 0) {
       return res.status(404).json({
         message: 'meal does not exist',
-        status: 'error',
+        status: 'error'
       });
     }
     return res.status(200).json({
       meal: foundMeal,
-      status: 'Success',
+      status: 'Success'
     });
   }
 }

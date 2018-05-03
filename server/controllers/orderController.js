@@ -5,7 +5,7 @@ const { orders } = db;
 class mealController {
   static addOrder(req, res) {
     const {
-      mealId, price, userId, quantity,
+      mealId, price, userId, quantity
     } = req.body;
     const id = orders[orders.length - 1].id + 1;
     const addedMeal = {
@@ -13,13 +13,13 @@ class mealController {
       userId,
       mealId,
       quantity,
-      price,
+      price
     };
     orders.push(addedMeal);
     return res.status(201).json({
       meal: addedMeal,
       status: 'Success',
-      message: 'Meal booked to Order successfully',
+      message: 'Meal booked to Order successfully'
     });
   }
 
@@ -34,19 +34,19 @@ class mealController {
       return res.status(200).json({
         foundOrder,
         status: 'Success',
-        message: 'Order updated successfully',
+        message: 'Order updated successfully'
       });
     }
     return res.status(404).json({
       status: 'Error',
-      message: 'Order not found',
+      message: 'Order not found'
     });
   }
 
   static getOrders(req, res) {
     return res.status(200).json({
       orders,
-      message: 'List of Orders',
+      message: 'List of Orders'
     });
   }
 }

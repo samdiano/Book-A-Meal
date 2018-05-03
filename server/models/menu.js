@@ -2,14 +2,13 @@ export default (sequelize, DataTypes) => {
   const Menu = sequelize.define('Menu', {
     userId: DataTypes.INTEGER,
     title: DataTypes.STRING,
-    date: DataTypes.DATETIME,
+    date: DataTypes.DATE
   }, {});
   Menu.associate = (models) => {
     // associations can be defined here
-    Menu.belongsToMany(models.Meal, {
-      through: 'MenuMeal',
-      as: 'Meal',
-      foreignKey: 'menuId',
+    Menu.belongsTo(models.user, {
+      foreignKey: 'UserId',
+      onDelete: 'CASCADE'
     });
   };
   return Menu;

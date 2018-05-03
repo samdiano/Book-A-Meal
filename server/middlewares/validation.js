@@ -20,14 +20,14 @@ class ValidatorHandler {
    */
   static mealRequiredInputs(req, res, next) {
     const {
-      title, description, price,
+      title, description, price
     } = req.body;
 
     if (title === undefined) {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'No input was received for meal',
+          message: 'No input was received for meal'
         });
     }
 
@@ -35,7 +35,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'No input was received for description',
+          message: 'No input was received for description'
         });
     }
 
@@ -43,7 +43,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'No input was received for price',
+          message: 'No input was received for price'
         });
     }
 
@@ -51,7 +51,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'title name cannot be empty',
+          message: 'title name cannot be empty'
         });
     }
 
@@ -59,7 +59,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'title contains invalid character',
+          message: 'title contains invalid character'
         });
     }
 
@@ -67,7 +67,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'title should be 3 to 30 characters',
+          message: 'title should be 3 to 30 characters'
         });
     }
 
@@ -75,7 +75,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Invalid title. Use single whitespace',
+          message: 'Invalid title. Use single whitespace'
         });
     }
 
@@ -83,7 +83,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'title cannot end/begin with whitespace',
+          message: 'title cannot end/begin with whitespace'
         });
     }
 
@@ -92,21 +92,21 @@ class ValidatorHandler {
       return res.status(404)
         .json({
           status: 'Fail',
-          message: 'description cannot be empty',
+          message: 'description cannot be empty'
         });
     }
     if (!validator.isLength(description, { min: 15, max: 300 })) {
       return res.status(404)
         .json({
           status: 'Fail',
-          message: 'description should be 30 to 300 characters',
+          message: 'description should be 30 to 300 characters'
         });
     }
     if (validator.contains(description, '  ')) {
       return res.status(404)
         .json({
           status: 'Fail',
-          message: 'Invalid description: Please use single whitespace.',
+          message: 'Invalid description: Please use single whitespace.'
         });
     }
 
@@ -114,7 +114,7 @@ class ValidatorHandler {
       return res.status(404)
         .json({
           status: 'Fail',
-          message: 'Description cannot end/begin with whitespace',
+          message: 'Description cannot end/begin with whitespace'
         });
     }
 
@@ -122,7 +122,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'Description contains invalid character',
+          message: 'Description contains invalid character'
         });
     }
 
@@ -136,7 +136,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'No input was recieved for content',
+          message: 'No input was recieved for content'
         });
     }
 
@@ -144,7 +144,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'No input was recieved for content',
+          message: 'No input was recieved for content'
         });
     }
 
@@ -152,7 +152,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username name cannot be empty',
+          message: 'username name cannot be empty'
         });
     }
 
@@ -160,7 +160,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username name should be 3 to 10 characters',
+          message: 'username name should be 3 to 10 characters'
         });
     }
 
@@ -168,7 +168,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Username should be alphanumeric.',
+          message: 'Username should be alphanumeric.'
         });
     }
 
@@ -176,7 +176,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'review content cannot be empty',
+          message: 'review content cannot be empty'
         });
     }
 
@@ -184,7 +184,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'review content should have 10 to 100 characters',
+          message: 'review content should have 10 to 100 characters'
         });
     }
 
@@ -192,7 +192,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Invalid content: Use single whitespace.',
+          message: 'Invalid content: Use single whitespace.'
         });
     }
 
@@ -200,7 +200,7 @@ class ValidatorHandler {
       return res.status(400)
         .json({
           status: 'Fail',
-          message: 'Content contains invalid character',
+          message: 'Content contains invalid character'
         });
     }
 
@@ -208,7 +208,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Content cannot end/begin with whitespace',
+          message: 'Content cannot end/begin with whitespace'
         });
     }
 
@@ -222,7 +222,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'No input was received for username',
+          message: 'No input was received for username'
         });
     }
 
@@ -230,7 +230,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'No input was received for password',
+          message: 'No input was received for password'
         });
     }
 
@@ -238,7 +238,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'No input was received for email',
+          message: 'No input was received for email'
         });
     }
 
@@ -246,7 +246,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username cannot be empty',
+          message: 'username cannot be empty'
         });
     }
 
@@ -254,7 +254,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username should have 2 to 20 characters',
+          message: 'username should have 2 to 20 characters'
         });
     }
 
@@ -262,7 +262,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Only letter characters are allowed.',
+          message: 'Only letter characters are allowed.'
         });
     }
 
@@ -270,7 +270,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Please use a valid email',
+          message: 'Please use a valid email'
         });
     }
 
@@ -278,7 +278,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Email should be 10 to 50 characters long',
+          message: 'Email should be 10 to 50 characters long'
         });
     }
 
@@ -286,7 +286,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Password cannot be empty',
+          message: 'Password cannot be empty'
         });
     }
 
@@ -294,7 +294,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Password should not contain whitespace',
+          message: 'Password should not contain whitespace'
         });
     }
 
@@ -302,7 +302,7 @@ class ValidatorHandler {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'Passord should be 4 to 16 characters long',
+          message: 'Passord should be 4 to 16 characters long'
         });
     }
     return next();

@@ -1,28 +1,28 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import config from '../../config';
-import db from '../../model';
+import db from '../../server/models';
 
 const { users } = db;
 
 class userController {
   static signupUser(req, res) {
     const {
-      username, email
+      name, email
     } = req.body;
     const password = bcrypt.hashSync(req.body.password, 10);
     const id = users[users.length - 1].id + 1;
     const addedUser = {
       id,
-      username,
+      name,
       email,
       password
     };
     const foundEmail = users.find(user => user.email.toLowerCase() === email.toLowerCase());
-    const foundUsername = users.find(user => user.username.toLowerCase()
-     === username.toLowerCase());
+    const foundname = users.find(user => user.name.toLowerCase()
+     === name.toLowerCase());
 
-    if (!foundEmail && !foundUsername) {
+    if (!foundEmail && !foundname) {
       users.push(addedUser);
     }
     if (foundEmail) {
@@ -31,10 +31,10 @@ class userController {
         message: 'Email already exist. Use another email or login'
       });
     }
-    if (foundUsername) {
+    if (foundname) {
       return res.status(409).json({
         status: 'Fail',
-        message: 'Username already exist. Use another another username or login'
+        message: 'name already exist. Use another another name or login'
       });
     }
     const token = jwt.sign({ id: users.id }, config.secret, {
@@ -56,7 +56,7 @@ class userController {
       if (email.toLowerCase() === foundUser.email.toLocaleLowerCase()
       && passwordIsValid) {
         return res.status(200).json({
-          message: `Hello '${foundUser.username}', your login was successful`
+          message: `Hello '${foundUser.name}', your login was successful`
         });
       }
       return res.status(401).json({

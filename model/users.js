@@ -4,36 +4,36 @@ const users = [
     username: 'George',
     email: 'geepee@gmail.com',
     password: 'pwd123',
-    role: 'user',
+    role: 'user'
   },
   {
     id: 2,
     username: 'Tobi',
     email: 'tboy@gmail.com',
     password: 'pssword',
-    role: 'user',
+    role: 'user'
   },
   {
     id: 3,
     username: 'Michael',
     email: 'mike@gmail.com',
     password: 'mikky',
-    role: 'user',
+    role: 'user'
   },
   {
     id: 4,
     username: 'Gideon',
     email: 'giddy@gmail.com',
     password: 'giddyboss',
-    role: 'caterer',
+    role: 'caterer'
   },
   {
     id: 5,
     username: 'Christine',
     email: 'christine@gmail.com',
     password: 'secret',
-    role: 'caterer',
-  },
+    role: 'caterer'
+  }
 ];
 
 export default users;

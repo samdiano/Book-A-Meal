@@ -10,7 +10,8 @@ describe('Meals', () => {
     chai.request(server)
       .get('/api/v1/meals')
       .end((err, res) => {
-        res.should.have.status(200);
+        expect(res.status).to.equal(200);
+        expect(res).to.be.an('object');
         done();
       });
   });
@@ -23,7 +24,7 @@ describe('Meals', () => {
         userId: 5,
         title: 'Banana',
         description: 'Fruit',
-        price: 1000,
+        price: 1000
       })
       .end((err, res) => {
         expect(res.body.message).to.equal('Meal updated successfully');
@@ -41,10 +42,12 @@ describe('Meals', () => {
         userId: 5,
         title: 'Strawberries',
         description: 'Fruity delicacy',
-        price: 1000,
+        price: 1000
       })
       .end((err, res) => {
         expect(res.body.message).to.equal('Meal added successfully');
+        expect(res.body.meal).to.be.an('object');
+        // expect(res.body.meal.id).to.be.a('string');
         expect(res.status).to.equal(201);
         expect(res.body).to.have.property('status').equal('Success');
         done();
@@ -83,7 +86,7 @@ describe('Menu', () => {
         title: 'Bread',
         description: 'delicious Carbohydrate',
         price: 500,
-        date: 3 - 4 - 2018,
+        date: 3 - 4 - 2018
       })
       .end((err, res) => {
         expect(res.body.message).to.equal('Meal added to Menu successfully');
@@ -101,7 +104,7 @@ describe('Menu', () => {
         title: 'Bread',
         description: 'delicious Carbohydrate',
         price: 500,
-        date: 3 - 4 - 2018,
+        date: 3 - 4 - 2018
       })
       .end((err, res) => {
         expect(res.body.message).to.equal('Menu updated successfully');
@@ -141,7 +144,7 @@ describe('Orders', () => {
         userId: 25,
         mealId: 7,
         quantity: 5,
-        price: 7000,
+        price: 7000
       })
       .end((err, res) => {
         expect(res.body.message).to.equal('Meal booked to Order successfully');
@@ -158,7 +161,7 @@ describe('Orders', () => {
         userId: 25,
         mealId: 7,
         quantity: 5,
-        price: 7500,
+        price: 7500
       })
       .end((err, res) => {
         expect(res.body.message).to.equal('Order updated successfully');
