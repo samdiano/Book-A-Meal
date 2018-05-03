@@ -9,17 +9,6 @@ env:
     - CXX=g++-5
     - NODE_ENV=test
 
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - g++-5
-
-before_install:
-  - npm install -g node-gyp
-  - npm install -g node-pre-gyp
-
 install:
   - npm install
 
@@ -30,8 +19,7 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - npm run lint
-  - npm run cov-test:server
+  - npm run test
 
 deploy:
   skip_cleanup: true
