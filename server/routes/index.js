@@ -1,7 +1,7 @@
-import meal from '../controllers/mealController';
-import menu from '../controllers/menuController';
-import orders from '../controllers/orderController';
-import Auth from '../controllers/userController';
+import meal from '../controllers/MealController';
+import menu from '../controllers/MenuController';
+import orders from '../controllers/OrderController';
+import Auth from '../controllers/UserController';
 import ValidatorHandler from '../middlewares/validation';
 
 const routes = (app) => {

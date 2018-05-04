@@ -2,7 +2,7 @@ import db from '../../model';
 
 const { orders } = db;
 
-class mealController {
+class OrderController {
   static addOrder(req, res) {
     const {
       mealId, price, userId, quantity
@@ -51,4 +51,4 @@ class mealController {
   }
 }
 
-export default mealController;
+export default OrderController;

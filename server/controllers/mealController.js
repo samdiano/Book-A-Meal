@@ -3,7 +3,7 @@ import db from '../../model';
 const { meals } = db;
 
 // Adds meal to meal options
-class mealController {
+class MealController {
   static addMeal(req, res) {
     const {
       title, description, price, userId
@@ -101,4 +101,4 @@ class mealController {
   }
 }
 
-export default mealController;
+export default MealController;
