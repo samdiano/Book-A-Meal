@@ -6,7 +6,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   Order.associate = (models) => {
     // associations can be defined here
-     /* Order.hasMany(models.Meals, {
+    /* Order.hasMany(models.Meals, {
       foreignKey: 'MealId',
       onDelete: 'CASCADE'
     });

@@ -5,6 +5,14 @@ import server from '../app';
 chai.use(chaiHttp);
 chai.should();
 
+let meal = {
+  id: 4,
+  userId: 5,
+  title: 'Strawberries',
+  description: 'Fruity delicacy',
+  price: 1000
+};
+
 describe('Meals', () => {
   it('should get ALL meals on /meals GET', (done) => {
     chai.request(server)
@@ -47,7 +55,11 @@ describe('Meals', () => {
       .end((err, res) => {
         expect(res.body.message).to.equal('Meal added successfully');
         expect(res.body.meal).to.be.an('object');
-        // expect(res.body.meal.id).to.be.a('string');
+        expect(res.body.meal.id).to.equal(meal.id);
+        expect(res.body.meal.userId).to.equal(meal.userId);
+        expect(res.body.meal.title).to.equal(meal.title);
+        expect(res.body.meal.description).to.equal(meal.description);
+        expect(res.body.meal.price).to.equal(meal.price);
         expect(res.status).to.equal(201);
         expect(res.body).to.have.property('status').equal('Success');
         done();
@@ -86,7 +98,7 @@ describe('Menu', () => {
         title: 'Bread',
         description: 'delicious Carbohydrate',
         price: 500,
-        date: 3 - 4 - 2018
+        date: '3 - 4 - 2018'
       })
       .end((err, res) => {
         expect(res.body.message).to.equal('Meal added to Menu successfully');

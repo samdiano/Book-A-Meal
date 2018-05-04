@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import config from '../../config';
-import User from '../../server/models';
+import { User } from '../../server/models';
 
 
 class UserController {
@@ -20,6 +20,7 @@ class UserController {
     const token = jwt.sign({ id: User.id }, config.secret, {
       expiresIn: 86400 // expires in 24 hours
     });
+    User.create(addedUser);
     return res.status(201).json({
       newUser: addedUser,
       token,
@@ -30,7 +31,12 @@ class UserController {
 
   static signinUser(req, res) {
     const { email, password } = req.body;
-    const foundUser = User.find(User => User.email === email);
+    const foundUser = User.findById({
+      where: {
+        email, password
+      }
+    });
+
     const passwordIsValid = bcrypt.compareSync(password, foundUser.password);
     if (foundUser) {
       if (email.toLowerCase() === foundUser.email.toLocaleLowerCase()

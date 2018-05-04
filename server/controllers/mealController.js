@@ -2,6 +2,7 @@ import db from '../../model';
 
 const { meals } = db;
 
+// Adds meal to meal options
 class mealController {
   static addMeal(req, res) {
     const {
@@ -39,6 +40,7 @@ class mealController {
     });
   }
 
+  // modify fields in meals
   static updateMeal(req, res) {
     const foundMeal = meals.find(meal => meal.id === parseInt(req.params.mealId, 10));
     if (foundMeal) {
@@ -57,6 +59,7 @@ class mealController {
     });
   }
 
+  // remove meal from meal options
   static removeMeal(req, res) {
     const foundMeal = meals.find(meal => meal.id === parseInt(req.params.mealId, 10));
 
@@ -73,7 +76,7 @@ class mealController {
       message: 'Meal not found'
     });
   }
-
+  // get all meals
   static getAllMeals(req, res) {
     return res.status(200).json({
       meal: meals,

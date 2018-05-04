@@ -1,7 +1,7 @@
 import db from '../../model';
 
 const { menu } = db;
-
+// add meal to menu
 class menuController {
   static addMenu(req, res) {
     const {

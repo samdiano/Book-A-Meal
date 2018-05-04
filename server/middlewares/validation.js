@@ -2,7 +2,7 @@ import validator from 'validator';
 import db from '../../model';
 
 const { meals } = db;
-const regexItem = new RegExp('^[a-zA-Z0-9 ]*$');
+// const regexItem = new RegExp('^[a-zA-Z0-9 ]*$');
 
 /*
  * Class representing validator
@@ -55,13 +55,13 @@ class ValidatorHandler {
         });
     }
 
-    if (regexItem.IsMatch(title)) {
+    /* if (regexItem.isMatch(title)) {
       return res.status(400)
         .json({
           status: 'Fail',
           message: 'title contains invalid character'
         });
-    }
+    } */
 
     if (!validator.isLength(title, { min: 3, max: 20 })) {
       return res.status(406)
@@ -95,7 +95,7 @@ class ValidatorHandler {
           message: 'description cannot be empty'
         });
     }
-    if (!validator.isLength(description, { min: 15, max: 300 })) {
+    if (!validator.isLength(description, { min: 3, max: 300 })) {
       return res.status(404)
         .json({
           status: 'Fail',
@@ -118,13 +118,13 @@ class ValidatorHandler {
         });
     }
 
-    if (regexItem.IsMatch(description)) {
+    /* if (regexItem.IsMatch(description)) {
       return res.status(400)
         .json({
           status: 'Fail',
           message: 'Description contains invalid character'
         });
-    }
+    } */
 
     return next();
   }
@@ -196,13 +196,6 @@ class ValidatorHandler {
         });
     }
 
-    if (regexItem.IsMatch(content)) {
-      return res.status(400)
-        .json({
-          status: 'Fail',
-          message: 'Content contains invalid character'
-        });
-    }
 
     if (content !== validator.trim(content, ' ')) {
       return res.status(406)

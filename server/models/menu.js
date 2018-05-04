@@ -6,7 +6,7 @@ export default (sequelize, DataTypes) => {
   }, {});
   Menu.associate = (models) => {
     // associations can be defined here
-      /* Menu.belongsTo(models.user, {
+    /* Menu.belongsTo(models.user, {
       foreignKey: 'UserId',
       onDelete: 'CASCADE'
     });  */
