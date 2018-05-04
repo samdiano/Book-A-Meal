@@ -1,8 +1,6 @@
 import validator from 'validator';
 import db from '../../model';
 
-const { meals } = db;
-// const regexItem = new RegExp('^[a-zA-Z0-9 ]*$');
 
 /*
  * Class representing validator
@@ -54,14 +52,6 @@ class ValidatorHandler {
           message: 'title name cannot be empty'
         });
     }
-
-    /* if (regexItem.isMatch(title)) {
-      return res.status(400)
-        .json({
-          status: 'Fail',
-          message: 'title contains invalid character'
-        });
-    } */
 
     if (!validator.isLength(title, { min: 3, max: 20 })) {
       return res.status(406)
@@ -115,93 +105,6 @@ class ValidatorHandler {
         .json({
           status: 'Fail',
           message: 'Description cannot end/begin with whitespace'
-        });
-    }
-
-    /* if (regexItem.IsMatch(description)) {
-      return res.status(400)
-        .json({
-          status: 'Fail',
-          message: 'Description contains invalid character'
-        });
-    } */
-
-    return next();
-  }
-
-  static reviewRequiredInputs(req, res, next) {
-    const { name, content } = req.body;
-
-    if (name === undefined) {
-      return res.status(400)
-        .json({
-          status: 'Fail',
-          message: 'No input was recieved for content'
-        });
-    }
-
-    if (content === undefined) {
-      return res.status(400)
-        .json({
-          status: 'Fail',
-          message: 'No input was recieved for content'
-        });
-    }
-
-    if (validator.isEmpty(name)) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'name name cannot be empty'
-        });
-    }
-
-    if (!validator.isLength(name, { min: 3, max: 10 })) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'name name should be 3 to 10 characters'
-        });
-    }
-
-    if (!validator.isAlphanumeric(name)) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'Username should be alphanumeric.'
-        });
-    }
-
-    if (validator.isEmpty(content)) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'review content cannot be empty'
-        });
-    }
-
-    if (!validator.isLength(content, { min: 10, max: 100 })) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'review content should have 10 to 100 characters'
-        });
-    }
-
-    if (validator.contains(content, '  ')) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'Invalid content: Use single whitespace.'
-        });
-    }
-
-
-    if (content !== validator.trim(content, ' ')) {
-      return res.status(406)
-        .json({
-          status: 'Fail',
-          message: 'Content cannot end/begin with whitespace'
         });
     }
 
