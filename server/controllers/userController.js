@@ -1,43 +1,23 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import config from '../../config';
-import db from '../../server/models';
+import User from '../../server/models';
 
-const { users } = db;
 
-class userController {
+class UserController {
   static signupUser(req, res) {
     const {
-      name, email
+      name, email, role
     } = req.body;
     const password = bcrypt.hashSync(req.body.password, 10);
-    const id = users[users.length - 1].id + 1;
     const addedUser = {
-      id,
       name,
       email,
+      role,
       password
     };
-    const foundEmail = users.find(user => user.email.toLowerCase() === email.toLowerCase());
-    const foundname = users.find(user => user.name.toLowerCase()
-     === name.toLowerCase());
 
-    if (!foundEmail && !foundname) {
-      users.push(addedUser);
-    }
-    if (foundEmail) {
-      return res.status(409).json({
-        status: 'Fail',
-        message: 'Email already exist. Use another email or login'
-      });
-    }
-    if (foundname) {
-      return res.status(409).json({
-        status: 'Fail',
-        message: 'name already exist. Use another another name or login'
-      });
-    }
-    const token = jwt.sign({ id: users.id }, config.secret, {
+    const token = jwt.sign({ id: User.id }, config.secret, {
       expiresIn: 86400 // expires in 24 hours
     });
     return res.status(201).json({
@@ -50,7 +30,7 @@ class userController {
 
   static signinUser(req, res) {
     const { email, password } = req.body;
-    const foundUser = users.find(user => user.email === email);
+    const foundUser = User.find(User => User.email === email);
     const passwordIsValid = bcrypt.compareSync(password, foundUser.password);
     if (foundUser) {
       if (email.toLowerCase() === foundUser.email.toLocaleLowerCase()
@@ -70,4 +50,4 @@ class userController {
   }
 }
 
-export default userController;
+export default UserController;

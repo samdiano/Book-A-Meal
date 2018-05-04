@@ -130,9 +130,9 @@ class ValidatorHandler {
   }
 
   static reviewRequiredInputs(req, res, next) {
-    const { username, content } = req.body;
+    const { name, content } = req.body;
 
-    if (username === undefined) {
+    if (name === undefined) {
       return res.status(400)
         .json({
           status: 'Fail',
@@ -148,23 +148,23 @@ class ValidatorHandler {
         });
     }
 
-    if (validator.isEmpty(username)) {
+    if (validator.isEmpty(name)) {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username name cannot be empty'
+          message: 'name name cannot be empty'
         });
     }
 
-    if (!validator.isLength(username, { min: 3, max: 10 })) {
+    if (!validator.isLength(name, { min: 3, max: 10 })) {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username name should be 3 to 10 characters'
+          message: 'name name should be 3 to 10 characters'
         });
     }
 
-    if (!validator.isAlphanumeric(username)) {
+    if (!validator.isAlphanumeric(name)) {
       return res.status(406)
         .json({
           status: 'Fail',
@@ -216,13 +216,13 @@ class ValidatorHandler {
   }
 
   static userRequiredInputs(req, res, next) {
-    const { username, email, password } = req.body;
+    const { name, email, password } = req.body;
 
-    if (username === undefined) {
+    if (name === undefined) {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'No input was received for username'
+          message: 'No input was received for name'
         });
     }
 
@@ -242,23 +242,23 @@ class ValidatorHandler {
         });
     }
 
-    if (validator.isEmpty(username)) {
+    if (validator.isEmpty(name)) {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username cannot be empty'
+          message: 'name cannot be empty'
         });
     }
 
-    if (!validator.isLength(username, { min: 2, max: 20 })) {
+    if (!validator.isLength(name, { min: 2, max: 20 })) {
       return res.status(406)
         .json({
           status: 'Fail',
-          message: 'username should have 2 to 20 characters'
+          message: 'name should have 2 to 20 characters'
         });
     }
 
-    if (!validator.isAlphanumeric(username)) {
+    if (!validator.isAlphanumeric(name)) {
       return res.status(406)
         .json({
           status: 'Fail',

@@ -8,37 +8,32 @@ const routes = (app) => {
   app.get('/api/v1', (req, res) => {
     res.status(200).send('Welcome to Book-A-Meal Api v1.0.0');
   });
-  // add meal
+
   app.post('/api/v1/meals', meal.addMeal);
-  // update meal
+
   app.put('/api/v1/meals/:mealId', meal.updateMeal);
-  // get all meals
+
   app.get('/api/v1/meals', meal.getAllMeals);
-  // remove a meal
+
   app.delete('/api/v1/meals/:mealId', meal.removeMeal);
 
-  // Get the days Menu
   app.get('/api/v1/menu', menu.getMenu);
-  // add meals to Menu
+
   app.post('/api/v1/menu', menu.addMenu);
-  // update meal in Menu
+
   app.put('/api/v1/menu/:mealId', menu.updateMenu);
-  // remove a meal from menu
+
   app.delete('/api/v1/menu/:mealId', menu.removeMenu);
 
-  // Get the days Menu
+
   app.get('/api/v1/orders', orders.getOrders);
-  // add meals to Menu
+
   app.post('/api/v1/orders', orders.addOrder);
-  // update meal in Menu
+
   app.put('/api/v1/orders/:orderId', orders.updateOrder);
 
-  // get a meal
-  // app.get('/api/v1/meals/:mealId', meal.getMeal);
-
-  // sign up a user
   app.post('/api/v1/auth/signup', ValidatorHandler.userRequiredInputs, Auth.signupUser);
-  // Login a user
+
   app.post('/api/v1/auth/signin', Auth.signinUser);
 };
 

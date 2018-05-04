@@ -7,7 +7,7 @@ export default (sequelize, DataTypes) => {
     price: DataTypes.STRING
   }, {});
   Meal.associate = (models) => {
-   /* // associations can be defined here
+    /* // associations can be defined here
     Meal.belongsTo(models.user, {
       foreignKey: 'userId',
       onDelete: 'CASCADE'
