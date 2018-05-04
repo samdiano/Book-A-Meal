@@ -5,8 +5,8 @@ import server from '../app';
 chai.use(chaiHttp);
 chai.should();
 
-let meal = {
-  id: 4,
+const meal = {
+  id: 3,
   userId: 5,
   title: 'Strawberries',
   description: 'Fruity delicacy',
@@ -45,13 +45,7 @@ describe('Meals', () => {
   it('Should add a meal to the meals', (done) => {
     chai.request(server)
       .post('/api/v1/meals')
-      .send({
-        id: 4,
-        userId: 5,
-        title: 'Strawberries',
-        description: 'Fruity delicacy',
-        price: 1000
-      })
+      .send(meal)
       .end((err, res) => {
         expect(res.body.message).to.equal('Meal added successfully');
         expect(res.body.meal).to.be.an('object');
